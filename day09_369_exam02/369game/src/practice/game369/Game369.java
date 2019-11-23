@@ -1,6 +1,7 @@
-package practice.game369;
+﻿package practice.game369;
 
-import java.util.Scanner;
+// 369게임 1~100 까지의 자연수를 나열하되, 10개 단위로 줄바꿈을 하고 숫자에 3,6,9 중 하나라도 있으면 * 표시를 하기
+
 
 // [게임 설명서]
 // 게임은 시작전 유저 본인의 이름을 입력하시면 됩니다.
@@ -11,10 +12,11 @@ import java.util.Scanner;
 // 근데 만약 설마 진짜 만약에 지면 종료 문구가 나옵니다.
 // 너무 게임을 오래하면 어머니가 등장해 게임을 종료시킵니다.
 
+
+import java.util.Scanner;
+
 public class Game369 {
 	public static void main(String[] args) {
-		
-//		369게임 1~100 까지의 자연수를 나열하되, 10개 단위로 줄바꿈을 하고 숫자에 3,6,9 중 하나라도 있으면 * 표시를 하기
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -28,7 +30,7 @@ public class Game369 {
 		
 		while(true) {
 			System.out.println();
-			System.out.println("▼ 밑에 숫자를 입력해 게임을 시작해주세요 ▼");
+			System.out.println("▼ 밑에 숫자를 입력해 게임을 진행해주세요 ▼");
 			
 
 			int i = sc.nextInt();
@@ -43,6 +45,13 @@ public class Game369 {
 			} else {
 				System.out.printf("%s = %s\n", name ,sn);
 			}
+
+			if(i > 100) {
+				System.out.println("(끼~익!) 얼씨구? 게임??? 그만 놀고 공부해!\n");
+				System.out.println("어머니가 게임을 강제 종료시키셨습니다. ★ 수고하셨습니다 ★");
+				break;
+			}
+
 			int character = 1;
 			while (character <= 9) {				
 				String s = String.format("동기%d", character);
@@ -63,11 +72,6 @@ public class Game369 {
 				character++;
 				if (character > 9) continue;
 				
-				if(i > 1000) {
-					System.out.println("(끼~익!) 얼씨구? 게임??? 그만 놀고 공부해!");
-					System.out.println("어머니가 게임을 강제 종료시키셨습니다. 수고하셨습니다.");
-					break;
-				}
 			} // end while
 			
 		} // end while
