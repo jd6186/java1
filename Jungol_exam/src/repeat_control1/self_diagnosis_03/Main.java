@@ -1,4 +1,4 @@
-package 반복제어문1.자가진단03;
+﻿package 반복제어문1.자가진단03;
 
 import java.util.Scanner;
 
@@ -10,11 +10,11 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		while (true) {
-			System.out.println("number?");
+			System.out.print("number? ");
 			int i = sc.nextInt();
 			if (i > 0) System.out.println("positive integer");
 			if (i < 0) System.out.println("negative number");
-			if (i == 0) System.out.println("");
+			//if (i == 0) System.out.println("");
 			if (i == 0) break;
 		} // end while
 		
