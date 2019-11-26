@@ -1,8 +1,9 @@
-package main;
+package 선택제어문.자가진단03;
+
 
 import java.util.Scanner;
 
-public class Main {
+public class main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -20,5 +21,7 @@ public class Main {
 		
 		//제출할 땐 반드시 패키지는 지우고 제출해라.
 		
-	}
-}
+	} //end main
+} // end class
+
+//추가로 선택제어문과 반복제어문 1,2,3 배열 1,2
