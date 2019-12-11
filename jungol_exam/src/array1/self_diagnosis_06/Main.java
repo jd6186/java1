@@ -1,57 +1,30 @@
-﻿package 배열2.자가진단06;
+package 배열1.자가진단06;
 
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-//		문제 : 5명 학생의 국어 영어 수학 과학 4과목의 점수를 입력 받아서 각 개인별로 평균이 80 이상이면“합격” 
-//		그렇지 않으면“불합격”을 출력하고 합격한 사람의 수를 출력하는 프로그램을 작성하시오.
+//		문제. 10개의 정수를 입력받아 그 중 가장 작은 수를 출력하는 프로그램을 작성하시오.(입력받을 정수는 1000을 넘지 않는다.)
 		
-/*		입력예
-		85 67 95 65
-		80 95 86 56
-		100 98 67 86
-		95 76 84 65
-		67 86 90 76
-*/		
+//		입력 예
+//		5 10 8 55 6 31 12 24 61 2
 		
-//		출력예
-//		fail
-//		fail
-//		pass
-//		pass
-//		fail
-//		Successful : 2
+//		출력 예
+//		2
 		
-		Scanner sc = new Scanner (System.in);
+//		TODO
 		
-		int [][] score = new int [5][4];
+		Scanner sc = new Scanner(System.in);
 		
-		int count = 0;
-		for (int i = 0; i < score.length; i++) {
-			int a = 0;
-			double avg = 0.0;
-			for (int j = 0; j < score[i].length; j++) {
-				score[i][j] = sc.nextInt();
-				a = a + score[i][j];
-				avg = a / score[i].length;
-			} // end for
-				
-				
-			if (avg >= 80) {
-				System.out.println("pass");
-				count += 1;
-			} else {
-				System.out.println("fail");
-			} // end if
+		int [] n = new int[10];
+		for (int i = 0; i < n.length; i++) {
+			n[i] = sc.nextInt();
+			if(n[i] < n[0]) n[0] = n[i];
+					
 		} // end for
-		System.out.println("Successful : " + count);
+		System.out.println(n[0]);
 		
 		
-		
-		
-
-
 		
 	} // end main
 } // end class
